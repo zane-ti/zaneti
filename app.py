@@ -47,7 +47,7 @@ def api_chatbot():
     data = request.get_json(force=True)
     message = data.get('message', '')
 
-    OPENAI_API_KEY = os.environ.get(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)
+    OPENAI_API_KEY = os.environ.get("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")
     if OPENAI_API_KEY:
         # Example of real call to OpenAI (uncomment to use):
         # headers = {'Authorization': f'Bearer {OPENAI_API_KEY}', 'Content-Type': 'application/json'}
@@ -71,7 +71,7 @@ def api_imagem():
     data = request.get_json(force=True)
     prompt = data.get('prompt', '')
 
-    OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
+    OPENAI_API_KEY = os.environ.get("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")
     if OPENAI_API_KEY:
         # Example: generate image with OpenAI Images API (uncomment to use)
         # headers = {'Authorization': f'Bearer {OPENAI_API_KEY}', 'Content-Type':'application/json'}
