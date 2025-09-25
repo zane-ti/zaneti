@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Zane.TI — Início</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <img src="{{ url_for('static', filename='img/logo.png') }}" id="logo" alt="logo">
+      <nav>
+        <a href="/">Início</a>
+        <a href="/servicos">Serviços</a>
+        <a href="/chatbot">Chatbot</a>
+        <a href="/imagens">Imagens</a>
+        <a href="/traducao">Tradução</a>
+        <a href="/contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container hero">
+    <h1>Zane.TI — Soluções de Inteligência Artificial</h1>
+    <p>Criação de chatbots, geração de imagens por IA e tradução automática para seu negócio.</p>
+    <a class="btn" href="/chatbot">Testar Chatbot</a>
+  </main>
+
+  <section class="container services">
+    <h2>Nossos serviços</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>🤖 Chatbot</h3>
+        <p>Atendimento automatizado com IA.</p>
+        <a href="/chatbot">Abrir</a>
+      </div>
+      <div class="card">
+        <h3>🖼️ Geração de imagens</h3>
+        <p>Crie imagens únicas a partir de prompts.</p>
+        <a href="/imagens">Abrir</a>
+      </div>
+      <div class="card">
+        <h3>🌐 Tradução</h3>
+        <p>Tradução automática com DeepL/Google (opcional).</p>
+        <a href="/traducao">Abrir</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>© 2025 Zane.TI • contato@zaneti.com</p>
+  </footer>
+</body>
+</html>

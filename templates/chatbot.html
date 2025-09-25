@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chatbot - Zane.TI</title><link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"></head>
+<body>
+<header class="site-header"><div class="wrap"><img src="{{ url_for('static', filename='img/logo.png') }}" id="logo"><nav><a href='/'>&larr; Início</a></nav></div></header>
+<main class="container">
+  <h1>Chatbot Inteligente (demo)</h1>
+  <div class="card">
+    <textarea id="prompt" rows="4" placeholder="Digite aqui..."></textarea>
+    <button id="send" class="btn">Enviar</button>
+    <pre id="reply" class="reply"></pre>
+  </div>
+</main>
+<script>
+document.getElementById('send').addEventListener('click', async ()=>{
+  const prompt = document.getElementById('prompt').value;
+  const res = await fetch('/api/chatbot',{method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({message: prompt})});
+  const j = await res.json();
+  document.getElementById('reply').innerText = j.error ? ('Erro: '+j.error) : j.reply;
+});
+</script>
+</body>
+</html>
